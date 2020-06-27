@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4uR-bf-Y6M">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--履歴-->
+        <scene sceneID="8xm-w2-d3a">
+            <objects>
+                <viewController title="履歴" id="4uR-bf-Y6M" customClass="HistoryViewController" customModule="SampleSwiftApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="05X-kn-hyc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gf8-uk-GkN">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <connections>
+                                    <segue destination="EPv-sd-CPL" kind="embed" id="2Sd-lV-M36"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eyg-Hp-br3">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <connections>
+                                    <segue destination="Ac3-sS-Uoj" kind="embed" id="1tH-9n-LJm"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="eyg-Hp-br3" firstAttribute="leading" secondItem="Fd0-K1-EIc" secondAttribute="leading" id="Fd9-mh-8RD"/>
+                            <constraint firstItem="Fd0-K1-EIc" firstAttribute="bottom" secondItem="eyg-Hp-br3" secondAttribute="bottom" id="G2a-E7-BPb"/>
+                            <constraint firstItem="Fd0-K1-EIc" firstAttribute="trailing" secondItem="Gf8-uk-GkN" secondAttribute="trailing" id="MEV-dt-H5E"/>
+                            <constraint firstItem="Gf8-uk-GkN" firstAttribute="leading" secondItem="Fd0-K1-EIc" secondAttribute="leading" id="QPr-WO-zXf"/>
+                            <constraint firstItem="eyg-Hp-br3" firstAttribute="trailing" secondItem="Fd0-K1-EIc" secondAttribute="trailing" id="d4X-cy-5Pe"/>
+                            <constraint firstItem="Gf8-uk-GkN" firstAttribute="top" secondItem="Fd0-K1-EIc" secondAttribute="top" id="sCg-eM-nVc"/>
+                            <constraint firstItem="Fd0-K1-EIc" firstAttribute="bottom" secondItem="Gf8-uk-GkN" secondAttribute="bottom" id="sv4-xp-yaU"/>
+                            <constraint firstItem="eyg-Hp-br3" firstAttribute="top" secondItem="Fd0-K1-EIc" secondAttribute="top" id="z5q-Ac-3Zw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Fd0-K1-EIc"/>
+                    </view>
+                    <connections>
+                        <outlet property="historyTableContainerView" destination="Gf8-uk-GkN" id="hhR-6R-hbD"/>
+                        <outlet property="noHistoryContainerView" destination="eyg-Hp-br3" id="KQF-3e-vsl"/>
+                        <segue destination="d3F-Z5-vjO" kind="show" identifier="toWeather" id="WpH-dO-wvl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wUN-Rc-Aoa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-681" y="126"/>
+        </scene>
+        <!--History Table View Controller-->
+        <scene sceneID="zAy-bg-hyn">
+            <objects>
+                <tableViewController id="EPv-sd-CPL" customClass="HistoryTableViewController" customModule="SampleSwiftApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="AAz-3L-8tM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HistoryCell" id="pMm-eb-26n">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pMm-eb-26n" id="5zs-oM-yzr">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="EPv-sd-CPL" id="Ccs-QQ-3ow"/>
+                            <outlet property="delegate" destination="EPv-sd-CPL" id="pJZ-8m-mnl"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ST0-ae-GKX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-220" y="952"/>
+        </scene>
+        <!--No History View Controller-->
+        <scene sceneID="Cv7-rf-YFV">
+            <objects>
+                <viewController id="Ac3-sS-Uoj" customClass="NoHistoryViewController" customModule="SampleSwiftApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JlA-bn-jRn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Vs-Dd-ghI">
+                                <rect key="frame" x="16" y="240" width="382" height="382"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="2YT-aY-zpJ"/>
+                                    <constraint firstAttribute="width" priority="750" constant="500" id="7w9-9q-d69"/>
+                                    <constraint firstAttribute="width" secondItem="1Vs-Dd-ghI" secondAttribute="height" multiplier="1:1" id="fT4-RT-tad"/>
+                                </constraints>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="アバターの取得に失敗しました😢" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TCw-mH-O4R">
+                                <rect key="frame" x="52" y="419" width="310.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="履歴がありません" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZSG-yj-ebL">
+                                <rect key="frame" x="125.5" y="638" width="163.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ZSG-yj-ebL" firstAttribute="top" secondItem="1Vs-Dd-ghI" secondAttribute="bottom" constant="16" id="2Xg-Ik-fqI"/>
+                            <constraint firstItem="b8C-Re-ctz" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ZSG-yj-ebL" secondAttribute="trailing" constant="16" id="5uS-yN-u3B"/>
+                            <constraint firstItem="ZSG-yj-ebL" firstAttribute="centerX" secondItem="JlA-bn-jRn" secondAttribute="centerX" id="7TE-en-3ry"/>
+                            <constraint firstItem="b8C-Re-ctz" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ZSG-yj-ebL" secondAttribute="bottom" constant="32" id="CSe-8i-Yp7"/>
+                            <constraint firstItem="b8C-Re-ctz" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="1Vs-Dd-ghI" secondAttribute="trailing" constant="16" id="KBL-Zd-rrf"/>
+                            <constraint firstItem="TCw-mH-O4R" firstAttribute="centerY" secondItem="1Vs-Dd-ghI" secondAttribute="centerY" id="NOa-Ib-xeU"/>
+                            <constraint firstItem="1Vs-Dd-ghI" firstAttribute="centerY" secondItem="b8C-Re-ctz" secondAttribute="centerY" id="haX-9B-1We"/>
+                            <constraint firstItem="b8C-Re-ctz" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="TCw-mH-O4R" secondAttribute="trailing" constant="16" id="jx1-dx-Rlz"/>
+                            <constraint firstItem="1Vs-Dd-ghI" firstAttribute="centerX" secondItem="JlA-bn-jRn" secondAttribute="centerX" id="lKS-KH-Yra"/>
+                            <constraint firstItem="TCw-mH-O4R" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="b8C-Re-ctz" secondAttribute="leading" constant="16" id="lh0-xH-e2E"/>
+                            <constraint firstItem="1Vs-Dd-ghI" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="b8C-Re-ctz" secondAttribute="leading" constant="16" id="qAs-KI-0s4"/>
+                            <constraint firstItem="TCw-mH-O4R" firstAttribute="centerX" secondItem="1Vs-Dd-ghI" secondAttribute="centerX" id="qYr-6F-QBq"/>
+                            <constraint firstItem="ZSG-yj-ebL" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="b8C-Re-ctz" secondAttribute="leading" constant="16" id="xnS-LS-0Dc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="b8C-Re-ctz"/>
+                    </view>
+                    <connections>
+                        <outlet property="avatarErrorLabel" destination="TCw-mH-O4R" id="qJy-Ny-zEq"/>
+                        <outlet property="avatarWebView" destination="1Vs-Dd-ghI" id="cLY-r2-3X8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z6F-gO-dVK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1184" y="952"/>
+        </scene>
+        <!--Weather-->
+        <scene sceneID="vBp-Ug-pVm">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Weather" id="d3F-Z5-vjO" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="M6j-me-u6j"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6sa-lA-6tI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="328" y="126"/>
+        </scene>
+    </scenes>
+</document>

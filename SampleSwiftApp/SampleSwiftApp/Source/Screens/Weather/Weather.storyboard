@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vww-RM-Eo8">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--お天気-->
+        <scene sceneID="W37-3z-loT">
+            <objects>
+                <viewController title="お天気" id="vww-RM-Eo8" customClass="WeatherViewController" customModule="SampleSwiftApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8co-aA-kMc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Swy-AH-pA5">
+                                <rect key="frame" x="163.66666666666666" y="593.66666666666663" width="48" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="emF-MJ-31N">
+                                <rect key="frame" x="16" y="234.66666666666663" width="343" height="343"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="600-Tr-Vz7"/>
+                                    <constraint firstAttribute="width" priority="750" constant="500" id="9Ox-tU-8zV"/>
+                                    <constraint firstAttribute="width" secondItem="emF-MJ-31N" secondAttribute="height" multiplier="1:1" id="rBd-2h-joX"/>
+                                </constraints>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="アバターの取得に失敗しました😢" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eDh-dT-5h1">
+                                <rect key="frame" x="32.333333333333343" y="394" width="310.33333333333326" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="eDh-dT-5h1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ibq-UW-222" secondAttribute="leading" constant="16" id="1at-FQ-kLv"/>
+                            <constraint firstItem="ibq-UW-222" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="eDh-dT-5h1" secondAttribute="trailing" constant="16" id="3uo-KQ-qHj"/>
+                            <constraint firstItem="Swy-AH-pA5" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ibq-UW-222" secondAttribute="leading" constant="16" id="6GL-bQ-9yc"/>
+                            <constraint firstItem="ibq-UW-222" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Swy-AH-pA5" secondAttribute="trailing" constant="16" id="7wm-Qg-Jus"/>
+                            <constraint firstItem="ibq-UW-222" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="emF-MJ-31N" secondAttribute="trailing" constant="16" id="8hh-Qd-IPL"/>
+                            <constraint firstItem="eDh-dT-5h1" firstAttribute="centerX" secondItem="emF-MJ-31N" secondAttribute="centerX" id="ME1-9B-Ij5"/>
+                            <constraint firstItem="emF-MJ-31N" firstAttribute="centerX" secondItem="8co-aA-kMc" secondAttribute="centerX" id="UK9-bZ-V85"/>
+                            <constraint firstItem="Swy-AH-pA5" firstAttribute="centerX" secondItem="8co-aA-kMc" secondAttribute="centerX" id="i1E-96-Hbm"/>
+                            <constraint firstItem="ibq-UW-222" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Swy-AH-pA5" secondAttribute="bottom" constant="16" id="kYh-j7-V2v"/>
+                            <constraint firstItem="emF-MJ-31N" firstAttribute="centerY" secondItem="8co-aA-kMc" secondAttribute="centerY" id="lcV-UY-uhL"/>
+                            <constraint firstItem="Swy-AH-pA5" firstAttribute="top" secondItem="emF-MJ-31N" secondAttribute="bottom" constant="16" id="mvO-Gd-KZm"/>
+                            <constraint firstItem="eDh-dT-5h1" firstAttribute="centerY" secondItem="emF-MJ-31N" secondAttribute="centerY" id="qXo-Xb-QRm"/>
+                            <constraint firstItem="emF-MJ-31N" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ibq-UW-222" secondAttribute="leading" constant="16" id="v0X-97-zum"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ibq-UW-222"/>
+                    </view>
+                    <connections>
+                        <outlet property="avatarErrorLabel" destination="eDh-dT-5h1" id="C0y-CH-1HU"/>
+                        <outlet property="avatarWebView" destination="emF-MJ-31N" id="gxf-OE-fVe"/>
+                        <outlet property="weatherLabel" destination="Swy-AH-pA5" id="gVI-El-W5N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z4q-wY-5j3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="158" y="146"/>
+        </scene>
+    </scenes>
+</document>

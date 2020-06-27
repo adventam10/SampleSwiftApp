@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jr8-o1-PME">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="9gZ-Qf-m3C">
+            <objects>
+                <navigationController id="jr8-o1-PME" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GiB-zj-iYj">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="cXa-k9-jfd" kind="relationship" relationship="rootViewController" id="xAo-pE-6da"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BOL-lA-3uA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-543" y="238"/>
+        </scene>
+        <!--スタート-->
+        <scene sceneID="et7-Fd-JKt">
+            <objects>
+                <viewController title="スタート" id="cXa-k9-jfd" customClass="StartViewController" customModule="SampleSwiftApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ad7-NX-9Xw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="bug-cg-Xz1">
+                                <rect key="frame" x="124" y="406" width="166" height="84"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ADW-cf-gEY">
+                                        <rect key="frame" x="0.0" y="0.0" width="166" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="どこかの天気をみる"/>
+                                        <connections>
+                                            <action selector="showWeather:" destination="cXa-k9-jfd" eventType="touchUpInside" id="DNy-In-w7g"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cQe-Qo-Hru">
+                                        <rect key="frame" x="0.0" y="50" width="166" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="履歴をみる"/>
+                                        <connections>
+                                            <action selector="showHistory:" destination="cXa-k9-jfd" eventType="touchUpInside" id="Zeu-RE-fbg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="どこかの都道府県の今日の天気予報がみれます" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ule-Zj-hde">
+                                <rect key="frame" x="46.5" y="780" width="321.5" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="fGQ-Id-fvg">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="bug-cg-Xz1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="s4x-w0-9eb" secondAttribute="leading" constant="16" id="43S-zK-git"/>
+                            <constraint firstItem="s4x-w0-9eb" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="bug-cg-Xz1" secondAttribute="trailing" constant="16" id="6oD-po-Ihe"/>
+                            <constraint firstItem="bug-cg-Xz1" firstAttribute="centerY" secondItem="Ad7-NX-9Xw" secondAttribute="centerY" id="EDX-XO-rb3"/>
+                            <constraint firstItem="fGQ-Id-fvg" firstAttribute="centerY" secondItem="Ad7-NX-9Xw" secondAttribute="centerY" id="JpC-WA-EVR"/>
+                            <constraint firstItem="s4x-w0-9eb" firstAttribute="bottom" secondItem="Ule-Zj-hde" secondAttribute="bottom" priority="750" constant="64" id="MDE-bR-drs"/>
+                            <constraint firstItem="fGQ-Id-fvg" firstAttribute="centerX" secondItem="Ad7-NX-9Xw" secondAttribute="centerX" id="O8d-E3-ZHs"/>
+                            <constraint firstItem="s4x-w0-9eb" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Ule-Zj-hde" secondAttribute="trailing" constant="16" id="ZXV-ie-0xU"/>
+                            <constraint firstItem="Ule-Zj-hde" firstAttribute="centerX" secondItem="Ad7-NX-9Xw" secondAttribute="centerX" id="dub-yJ-G0i"/>
+                            <constraint firstItem="Ule-Zj-hde" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="s4x-w0-9eb" secondAttribute="leading" constant="16" id="jci-wL-oyz"/>
+                            <constraint firstItem="bug-cg-Xz1" firstAttribute="centerX" secondItem="Ad7-NX-9Xw" secondAttribute="centerX" id="pU6-3S-Z05"/>
+                            <constraint firstItem="Ule-Zj-hde" firstAttribute="top" relation="greaterThanOrEqual" secondItem="bug-cg-Xz1" secondAttribute="bottom" constant="32" id="vi0-ku-bRu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="s4x-w0-9eb"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="スタート" id="urS-hL-NUn"/>
+                    <connections>
+                        <outlet property="historyButton" destination="cQe-Qo-Hru" id="L2M-YI-wx4"/>
+                        <outlet property="indicator" destination="fGQ-Id-fvg" id="9dg-Ft-Rg9"/>
+                        <outlet property="weatherButton" destination="ADW-cf-gEY" id="bYs-fj-TX5"/>
+                        <segue destination="Jn2-Qk-vS4" kind="show" identifier="toHistory" id="eFQ-iq-qUh"/>
+                        <segue destination="ZC0-en-18D" kind="show" identifier="toWeather" id="VHg-fl-Kf3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uDD-s8-6iY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="397" y="239"/>
+        </scene>
+        <!--History-->
+        <scene sceneID="qyW-YC-rMQ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="History" id="Jn2-Qk-vS4" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="gGj-GC-06y"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CEN-ae-T82" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1128" y="54"/>
+        </scene>
+        <!--Weather-->
+        <scene sceneID="xaQ-J3-z4a">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Weather" id="ZC0-en-18D" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="jSb-R2-ONk"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EOp-MS-SSB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1124" y="399"/>
+        </scene>
+    </scenes>
+</document>

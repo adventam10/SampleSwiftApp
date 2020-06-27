@@ -1,0 +1,51 @@
+name: LicensePlist, nameSpecified: 
+body: MIT License
+
+Copyrig…
+version: 2.15.1
+
+name: LicensePlist, nameSpecified: 
+body: MIT License
+
+Copyrig…
+version: 2.15.1
+
+name: R.swift, nameSpecified: 
+body: The MIT License (MIT…
+version: 5.2.2
+
+name: R.swift, nameSpecified: 
+body: The MIT License (MIT…
+version: 5.2.2
+
+name: R.swift.Library, nameSpecified: 
+body: The MIT License (MIT…
+version: 5.2.0
+
+name: R.swift.Library, nameSpecified: 
+body: The MIT License (MIT…
+version: 5.2.0
+
+name: SwiftLint, nameSpecified: 
+body: The MIT License (MIT…
+version: 0.39.2
+
+name: SwiftLint, nameSpecified: 
+body: The MIT License (MIT…
+version: 0.39.2
+
+name: APIKit, nameSpecified: , owner: ishkawa, version: 5.1.0
+
+name: DIKIt, nameSpecified: , owner: ishkawa, version: 0.5.0
+
+name: Nimble, nameSpecified: , owner: Quick, version: v8.1.1
+
+name: Quick, nameSpecified: , owner: Quick, version: v3.0.0
+
+name: realm-cocoa, nameSpecified: , owner: realm, version: v5.0.3
+
+name: SwiftyBeaver, nameSpecified: , owner: SwiftyBeaver, version: 1.9.1
+
+add-version-numbers: false
+
+LicensePlist Version: 2.15.0

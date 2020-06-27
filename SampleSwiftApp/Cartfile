@@ -1,0 +1,4 @@
+github "ishkawa/APIKit" == 5.1.0
+github "SwiftyBeaver/SwiftyBeaver" == 1.9.1
+github "ishkawa/DIKIt" == 0.5.0
+github "realm/realm-cocoa" == 5.0.3
