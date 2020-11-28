@@ -15,8 +15,8 @@ iOS アプリ開発のおすすめ構成模索用。
 * [joe schmoe](https://joeschmoe.io/)（アバター表示用）
 
 ## 開発環境
-* Xcode 11.5
-* Swift 5.2.4
+* Xcode 12.0
+* Swift 5.3
 * Bundler 2.1.4
 
 Target
